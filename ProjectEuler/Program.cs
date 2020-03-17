@@ -1,7 +1,7 @@
 namespace ProjectEuler
 {
-    public class Program
+    public static class Program
     {
-        static void Main() => Problem2.DoIt();
+        private static void Main() => Problem3.DoIt();
     }
 }
