@@ -6,27 +6,6 @@ namespace ProjectEuler
 {
     public static class Problem4
     {
-        public static bool IsP(int i)
-        {
-            var s = i.ToString();
-            for (var j = 0; j < s.Length; j++)
-            {
-                if (s[j] != s[s.Length - j - 1])
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
-        public static bool Is3(int i)
-        {
-            var s = i.ToString();
-            return s.Length == 3;
-        }
-
-
         public static void DoIt()
         {
             Console.WriteLine(
@@ -40,7 +19,7 @@ namespace ProjectEuler
             for (var i = target; i > 0; i--)
             for (var j = target; j > 0; j--)
             {
-                if (IsP(i * j) && Is3(i) && Is3(j) && !maxes.ContainsKey(i * j))
+                if ((i * j).IsPalindrome() && i.Is3Long() && j.Is3Long() && !maxes.ContainsKey(i * j))
                 {
                     maxes.Add(i * j, $"{i} * {j}");
                 }

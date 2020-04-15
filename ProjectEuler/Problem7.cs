@@ -6,20 +6,6 @@ namespace ProjectEuler
 {
     public static class Problem7
     {
-        public static bool IsPrimeNumber(int i)
-        {
-            var max = i / 2;
-            for (int j = 2; j <= max; j++)
-            {
-                var x = i % j;
-                if (x ==0)
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
-        
         public static void DoIt()
         {
             Console.WriteLine(
@@ -28,15 +14,11 @@ namespace ProjectEuler
             var target = 10001;
             Console.WriteLine($"Target: {target}");
 
-            var watch = new System.Diagnostics.Stopwatch();
-            
-            watch.Start();
-
             var idx = 0;
             
             for (int i = 2;true; i++)
             {
-                if (IsPrimeNumber(i))
+                if (i.IsPrimeNumber())
                 {
                     idx++;
                     Console.WriteLine($"{idx}: {i}");
@@ -48,11 +30,6 @@ namespace ProjectEuler
                 }
             }
             
-            
-            watch.Stop();
-
-            Console.WriteLine($"Execution Time: {watch.ElapsedTicks} ms");
-
         }
     }
 }

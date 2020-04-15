@@ -6,27 +6,6 @@ namespace ProjectEuler
 {
     public static class Problem6
     {
-        public static int SumOfSquares(int i)
-        {
-            var result = 0;
-            for (int j = 1; j <= i; j++)
-            {
-                result += (j * j);
-            }
-
-            return result;
-        }
-
-        public static int SquareOfSums(int i)
-        {
-            var result = 0;
-            for (int j = 1; j <= i; j++)
-            {
-                result += j;
-            }
-
-            return result * result;
-        }
         public static void DoIt()
         {
             Console.WriteLine(
@@ -39,8 +18,8 @@ namespace ProjectEuler
             
             watch.Start();
 
-            var soq = SumOfSquares(target);
-            var qos = SquareOfSums(target);
+            var soq = target.SumOfSquares();
+            var qos = target.SquareOfSums();
             
             Console.WriteLine($"{qos} - {soq} = {qos - soq}");
             

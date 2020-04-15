@@ -6,36 +6,6 @@ namespace ProjectEuler
 {
     public static class Problem5
     {
-        public static bool IsEvenlyDiv3(int i)
-        {
-            for (int j = 20; j > 1; j--)
-            {
-                var x = i % j;
-                if (x !=0)
-                {
-                    //Console.WriteLine($"{i} is niet deelbaar door {j} > false");
-                    return false;
-                }
-            }
-
-            return true;
-        }
-        
-        public static bool IsEvenlyDiv(int i)
-        {
-            for (int j = 1; j < 20; j++)
-            {
-                var x = i % j;
-                if (x !=0)
-                {
-                    //Console.WriteLine($"{i} is niet deelbaar door {j} > false");
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
         public static void DoIt()
         {
             Console.WriteLine(
@@ -53,7 +23,7 @@ namespace ProjectEuler
             int i = 1;
             for (; true; i++)
             {
-                if (IsEvenlyDiv3(i))
+                if (i.IsEvenlyDiv3())
                 {
                     break;
                 }
