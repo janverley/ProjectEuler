@@ -1,6 +1,8 @@
+using System;
+
 namespace ProjectEuler
 {
-    public static class IntExtensions
+    public static class Extensions
     {
         public static bool IsPrimeNumber(this int i)
         {
@@ -92,6 +94,11 @@ namespace ProjectEuler
             }
 
             return result;
+        }
+
+        public static bool IsInt(this double d)
+        {
+            return Math.Abs(d - Math.Floor(d)) < 0.00001;
         }
     }
 }

@@ -9,7 +9,7 @@ namespace ProjectEuler
             var watch = new System.Diagnostics.Stopwatch();
             watch.Start();
 
-            Problem8.DoIt();
+            Problem9.DoIt();
             
             watch.Stop();
             Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");
